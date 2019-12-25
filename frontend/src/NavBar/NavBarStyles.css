@@ -1,0 +1,12 @@
+.navbar-text {
+    color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
+.navbar-bar{
+  background-color: darkblue;
+  height: 40px;
+  text-align: center;
+}
+  

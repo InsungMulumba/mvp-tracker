@@ -1,0 +1,32 @@
+.stats-container {
+    display: flex;
+}
+.statsBar {
+    margin: 5px 0px;
+    width: 200px;
+    height: 40px;
+  }
+
+.player-card-container {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.player-stats-container {
+    color: darkblue;
+}
+
+.card-headings {
+    color: darkblue;
+    text-align: center;
+}
+
+.stats-text {
+    margin: auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.stats-text-label {
+    margin: auto 5px;
+}
