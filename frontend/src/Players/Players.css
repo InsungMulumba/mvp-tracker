@@ -2,18 +2,21 @@
     display: flex;
 }
 .statsBar {
-    margin: 5px 0px;
+    margin: 5px;
     width: 200px;
     height: 40px;
   }
 
 .player-card-container {
     display: flex;
-    /* justify-content: space-around; */
+     justify-content: space-evenly; 
 }
 
 .player-stats-container {
     color: darkblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-headings {
