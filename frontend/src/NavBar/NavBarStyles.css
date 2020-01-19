@@ -1,12 +1,11 @@
-.navbar-text {
+.navigationBar-text {
     color: white;
-    margin-top: 30px;
-    margin-left: 10px;
-  }
-
-.navbar-bar{
-  background-color: darkblue;
-  height: 40px;
-  text-align: center;
+    font-size: 32px;
 }
-  
+
+.navigationBar {
+  background-color: darkblue;
+  background: url(http://content.sportslogos.net/news/2017/07/New-NBA-Logo-1.png) no-repeat center;
+  size: 5% 5%;
+  background-size: 12%; 
+}

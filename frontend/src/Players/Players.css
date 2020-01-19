@@ -1,15 +1,24 @@
 .stats-container {
     display: flex;
 }
+
+.card-container {
+    padding: 32px 16px;
+}
+
 .statsBar {
-    margin: 5px;
-    width: 200px;
+    margin: 10px;
+    max-width: 75%;
     height: 40px;
   }
 
 .player-card-container {
     display: flex;
-     justify-content: space-evenly; 
+    justify-content: space-evenly; 
+}
+
+.player-details-container {
+    width: 40%;
 }
 
 .player-stats-container {
@@ -21,15 +30,20 @@
 
 .card-headings {
     color: darkblue;
-    text-align: center;
+    text-align: left;
 }
 
 .stats-text {
     margin: auto;
     font-size: 24px;
     font-weight: 700;
+    margin: auto 5px;
 }
 
 .stats-text-label {
     margin: auto 5px;
+}
+
+.head-shot { 
+    width: 60%;
 }
