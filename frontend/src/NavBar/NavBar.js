@@ -4,8 +4,8 @@ import './NavBarStyles.css';
 
 function NavBar() {
   return (
-    <nav className="navbar navigationBar bg-primary fixed-top">
-      <Link className="navigationBar-text" to="/">
+    <nav className="navbar navigation-bar bg-primary fixed-top">
+      <Link className="navigation-bar--text" to="/">
        MVP Tracker
       </Link>
     </nav>

@@ -25,9 +25,20 @@ class Player extends Component {
     });
   }
 
+
+
   calculateStatPercentage(max, playerAverage) {
     
     return ((playerAverage / max)*100);
+  }
+
+  renderStatsBar(statistic, statisticLabel, statisticAllTimeSeasonHigh){
+
+    return <div className="stats-container">
+    <p className="stats-text stats-text-label">{statisticLabel}</p>
+    <Line className="statsBar" percent={this.calculateStatPercentage(statisticAllTimeSeasonHigh,statistic)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={statistic}/>
+    <p className="stats-text stats-text-label">{statistic}</p>
+  </div>
   }
 
   render() {
@@ -41,23 +52,27 @@ class Player extends Component {
           <div key={player.player_id} className="jumbotron col-12 card-container">
             <h3 className="card-headings">{this.props.location.state.playerName}</h3>
 
-            <div className="stats-container">
-              <p className="stats-text stats-text-label">{"PTS "}</p>
-              <Line className="statsBar" percent={this.calculateStatPercentage(50,player.pts)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={player.pts}/>
-              <p className="stats-text stats-text-label">{player.pts}</p>
-            </div>
-    
-            <div className="stats-container">
-            <p className="stats-text stats-text-label">{"REB "}</p>
-            <Line className="statsBar" percent={this.calculateStatPercentage(23,player.reb)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={player.reb}/>
-            <p className="stats-text">{player.reb}</p>
-          </div>
-    
-            <div className="stats-container">
-              <p className="stats-text stats-text-label">{"AST "}</p>
-              <Line className="statsBar" percent={this.calculateStatPercentage(15,player.ast)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={player.ast}/>
-              <p className="stats-text">{player.ast}</p>
-            </div>
+            {
+              this.renderStatsBar(player.pts, 'PTS ', 50)
+            }
+
+            {
+              this.renderStatsBar(player.reb, 'REB ', 23)
+            }
+
+            {
+              this.renderStatsBar(player.ast, 'AST ', 15)
+            }
+
+            {
+              this.renderStatsBar(player.blk, 'BLK ',5.5)
+            }
+
+            {
+              this.renderStatsBar(player.stl, 'STL ',3.6)
+            }
+
+           
           <div>          
 
         <button className="btn btn-primary" onClick={() => this.setState({ expanded: !this.state.expanded })}>
@@ -72,17 +87,18 @@ class Player extends Component {
       {this.state.expanded ?
       (
         <div>
-            <div className="stats-container">
-              <p className="stats-text stats-text-label">{"BLK "}</p>
-              <Line className="statsBar" percent={this.calculateStatPercentage(5.5,player.blk)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={player.blk}/>
-              <p className="stats-text">{player.blk}</p>
-            </div>
+          {
+            this.renderStatsBar(player.fg_pct*1, 'FG% ',1)
+          }
 
-            <div className="stats-container">
-              <p className="stats-text stats-text-label">{"STL "}</p>
-              <Line className="statsBar" percent={this.calculateStatPercentage(3.6,player.stl)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={player.stl}/>
-              <p className="stats-text">{player.stl}</p>
-            </div>
+          {
+            this.renderStatsBar(player.fg3_pct, '3P% ',1)
+          }
+
+          {
+            this.renderStatsBar(player.ft_pct, 'FT% ',1)
+          }
+
          </div>
       ) :(null)
       }
