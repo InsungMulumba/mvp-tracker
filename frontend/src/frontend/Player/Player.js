@@ -35,10 +35,10 @@ class Player extends Component {
   renderStatsBar(statistic, statisticLabel, statisticAllTimeSeasonHigh){
 
     return <div className="stats-container">
-    <p className="stats-text stats-text-label">{statisticLabel}</p>
-    <Line className="statsBar" percent={this.calculateStatPercentage(statisticAllTimeSeasonHigh,statistic)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={statistic}/>
-    <p className="stats-text stats-text-label">{statistic}</p>
-  </div>
+      <p className="stats-text stats-text-label">{statisticLabel}</p>
+      <Line className="statsBar" percent={this.calculateStatPercentage(statisticAllTimeSeasonHigh,statistic)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={statistic}/>
+      <p className="stats-text stats-text-label">{statistic}</p>
+    </div>
   }
 
   render() {
