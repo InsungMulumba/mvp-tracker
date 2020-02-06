@@ -1,0 +1,9 @@
+.navigation-bar--text {
+    color: white;
+    font-size: 32px;
+}
+
+.navigation-bar {
+  background-size: 12%; 
+  height: 100px;
+}
