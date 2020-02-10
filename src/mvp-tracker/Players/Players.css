@@ -12,13 +12,13 @@
 
 .statsBar {
     margin: 10px;
-    max-width: 75%;
+    width: 70%;
     height: 40px;
   }
 
-  .row-structure {
-      flex-wrap: wrap;
-  }
+.row-structure {
+    flex-wrap: wrap;
+}
 
 .player-card-container {
     display: flex;
@@ -26,7 +26,7 @@
 }
 
 .player-details-container {
-    width: 40%;
+    width: 60%;
 }
 
 .player-stats-container {
@@ -55,8 +55,15 @@
 
 .stats-text-label {
     margin: auto 5px;
+    width: 50px;
 }
 
 .head-shot { 
     width: 180px;
+}
+
+.page-label {
+    text-align: center;
+    opacity: 0.7;
+    margin: 20px;
 }

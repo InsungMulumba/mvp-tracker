@@ -16,8 +16,9 @@ class players extends Component {
   }
 
   async componentDidMount() {
-    const playerInfo = (await axios.get('https://api.jsonbin.io/b/5dff6d6cec09451045d73908/6')).data;
-
+    const playerInfo = (
+      await axios.get('https://api.jsonbin.io/b/5dff6d6cec09451045d73908/6')).data;
+      
     this.setState({
       playerInfo,
     });
@@ -46,7 +47,12 @@ class players extends Component {
         <div className="row-structure">
 
           {this.state.playerInfo === null && <p>Loading players...</p>}
+          <div className="page-label">
+          Choose a player to see their updated date stats for the 2019-20 season
+
+          </div>
           {
+            
             this.state.playerInfo && this.state.playerInfo.map(player => (
               <div key={player.id} className="card-container">
                 <Link className="player-card-container" to={{

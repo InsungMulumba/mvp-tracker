@@ -32,7 +32,7 @@ class Player extends Component {
   renderStatsBar(statistic, statisticLabel, statisticAllTimeSeasonHigh){
 
     return <div className="stats-container">
-      <p className="stats-text stats-text-label">{statisticLabel}</p>
+      <div className="stats-text stats-text-label">{statisticLabel}</div>
       <Line className="statsBar" percent={this.calculateStatPercentage(statisticAllTimeSeasonHigh,statistic)} strokeWidth="1" strokeColor="darkblue" trailColor="white" label={statistic}/>
       <p className="stats-text stats-text-label">{statistic}</p>
     </div>
@@ -42,7 +42,6 @@ class Player extends Component {
     return (
     <div className="container">
       {this.state.playerStatistics === null && <p>Loading stats...</p>}
-      
       {
         this.state.playerStatistics && this.state.playerStatistics.map(player => (
           
