@@ -4,9 +4,9 @@ import './NavBarStyles.css';
 
 function NavBar() {
   return (
-    <nav className="navbar navigation-bar bg-primary fixed-top">
+    <nav className="navbar navigation-bar fixed-top">
       <Link className="navigation-bar--text" to="/">
-       MVP Tracker
+       2019-20 NBA MVP Tracker
       </Link>
     </nav>
   );

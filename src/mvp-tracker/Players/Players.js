@@ -43,7 +43,8 @@ class players extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
+        <div className="row-structure">
+
           {this.state.playerInfo === null && <p>Loading players...</p>}
           {
             this.state.playerInfo && this.state.playerInfo.map(player => (
@@ -56,18 +57,18 @@ class players extends Component {
                   }
                 }}>
                 <div className="player-details-container">
-                  <h3 className="card-headings">{player.name}</h3>
+                  <h3 className="card-headings card-headings--title">{player.name}</h3>
                   <h4 className="card-headings">{player.team}</h4>
                   <h4 className="card-headings">{player.height}</h4>
                   <h4 className="card-headings">{player.weight}</h4>
-                  </div>      
-                    <div className="player-image-container">
+                  </div>
+                  <div className="player-image-container">
                       <img 
                         className="head-shot" 
                         src={player.image}
                         alt={player.name}>
-                      </img>                                                     
-                    </div>
+                      </img>  
+                   </div>
                 </Link>
               </div>
             ))

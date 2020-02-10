@@ -6,14 +6,18 @@
     padding: 32px 16px;
     background-color: #ecf0f1;
     margin-bottom: 2pc;
-    max-width: 100%;
-    flex: 0 0 100%;
+    max-width: 60%;
+    margin-left: 20%;
 }
 
 .statsBar {
     margin: 10px;
     max-width: 75%;
     height: 40px;
+  }
+
+  .row-structure {
+      flex-wrap: wrap;
   }
 
 .player-card-container {
@@ -33,8 +37,13 @@
 }
 
 .card-headings {
-    color: darkblue;
+    color: black;
     text-align: left;
+    font-size: 18px;
+}
+
+.card-headings--title {
+    font-size: 22px;
 }
 
 .stats-text {
@@ -49,5 +58,5 @@
 }
 
 .head-shot { 
-    width: 60%;
+    width: 120px;
 }

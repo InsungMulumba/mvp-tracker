@@ -43,9 +43,9 @@ class Player extends Component {
 
   render() {
     return (
-
     <div className="container">
       {this.state.playerStatistics === null && <p>Loading stats...</p>}
+      
       {
         this.state.playerStatistics && this.state.playerStatistics.map(player => (
           
