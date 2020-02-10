@@ -16,7 +16,7 @@ class players extends Component {
   }
 
   async componentDidMount() {
-    const playerInfo = (await axios.get('https://api.jsonbin.io/b/5dff6d6cec09451045d73908/5')).data;
+    const playerInfo = (await axios.get('https://api.jsonbin.io/b/5dff6d6cec09451045d73908/6')).data;
 
     this.setState({
       playerInfo,
@@ -53,7 +53,8 @@ class players extends Component {
                   pathname:`/player/${player.id}`,
                   state: {
                     playerID: `${player.id}`,
-                    playerName: `${player.name}`
+                    playerName: `${player.name}`,
+                    playerPicture: `${player.image}`
                   }
                 }}>
                 <div className="player-details-container">

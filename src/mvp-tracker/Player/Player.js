@@ -16,7 +16,6 @@ class Player extends Component {
   async componentDidMount() {
     const playerID  = this.props.location.state.playerID;
     const playerName = this.props.location.state.playerName;
-
     const playerStatistics = (await axios.get('https://www.balldontlie.io/api/v1/season_averages?player_ids[]='+playerID)).data;
     this.setState({
       playerStatistics: playerStatistics.data,
@@ -24,8 +23,6 @@ class Player extends Component {
       playerName: playerName
     });
   }
-
-
 
   calculateStatPercentage(max, playerAverage) {
     
@@ -50,8 +47,7 @@ class Player extends Component {
         this.state.playerStatistics && this.state.playerStatistics.map(player => (
           
           <div key={player.player_id} className="jumbotron col-12 card-container">
-            <h3 className="card-headings">{this.props.location.state.playerName}</h3>
-
+            <h3 className="card-headings--title">{this.props.location.state.playerName}</h3>
             {
               this.renderStatsBar(player.pts, 'PTS ', 50)
             }
@@ -88,15 +84,15 @@ class Player extends Component {
       (
         <div>
           {
-            this.renderStatsBar(player.fg_pct*1, 'FG% ',1)
+            this.renderStatsBar((player.fg_pct*100).toFixed(2), 'FG% ', 100)
           }
 
           {
-            this.renderStatsBar(player.fg3_pct, '3P% ',1)
+            this.renderStatsBar((player.fg3_pct*100).toFixed(2), '3P% ', 100)
           }
 
           {
-            this.renderStatsBar(player.ft_pct, 'FT% ',1)
+            this.renderStatsBar((player.ft_pct*100).toFixed(2), 'FT% ', 100)
           }
 
          </div>
