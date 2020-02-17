@@ -48,8 +48,7 @@ class players extends Component {
 
           {this.state.playerInfo === null && <p>Loading players...</p>}
           <div className="page-label">
-          Choose a player to see their updated date stats for the 2019-20 season
-
+            Choose a player to see their updated stats for the 2019-20 season
           </div>
           {
             

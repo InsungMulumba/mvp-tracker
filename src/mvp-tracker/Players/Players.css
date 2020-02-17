@@ -23,6 +23,7 @@
 .player-card-container {
     display: flex;
     justify-content: space-evenly; 
+    text-decoration: none !important;
 }
 
 .player-details-container {
