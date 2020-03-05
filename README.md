@@ -1,7 +1,8 @@
 ### What is this
-A simple app to display the statistics of the top 10 players most likely to win the NBA 2019-20 MVP award. 
-Statistics/Player Info sourced from the great guys at https://www.balldontlie.io/
-Statistics updated every ~10 minutes
+- A simple app to display the statistics of the top 10 players most likely to win the NBA 2019-20 MVP award. 
+- Written using React and CSS
+- Statistics/Player Info sourced from the great guys at https://www.balldontlie.io/
+- Statistics updated every ~10 minutes
 
 ### `yarn start`
 
