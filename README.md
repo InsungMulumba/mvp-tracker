@@ -4,12 +4,4 @@
 - Statistics/Player Info sourced from the great guys at https://www.balldontlie.io/
 - Statistics updated every ~10 minutes
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-### TO-DO
-- More statistical fields
-- Deploy using Heroku
+[Link to live demo](https://mvp-tracker-2020.herokuapp.com/)
